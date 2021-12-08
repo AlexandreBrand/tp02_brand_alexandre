@@ -8,7 +8,7 @@
 <body>
     <app-tetiere></app-tetiere>
     <app-formulaire (data)="transite($event)"></app-formulaire>
-    <app-recapitulatif></app-recapitulatif>
+    <app-recapitulatif [dataUtilisateur]="resultFormulaire"></app-recapitulatif>
     <app-footer></app-footer>
 </body>
 </html>

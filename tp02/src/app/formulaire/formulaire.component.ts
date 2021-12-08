@@ -19,7 +19,7 @@ export class FormulaireComponent implements OnInit {
   user_login : string = "";
   user_pays : string = "";
 
-  @Output() data = new EventEmitter<{}>();
+  @Output() data = new EventEmitter<string>();
 
 
   constructor() { }
@@ -55,7 +55,7 @@ export class FormulaireComponent implements OnInit {
   }
 
   onClick(){
-    this.data.emit({"user_name":this.user_name,
+    this.data.emit(JSON.stringify({"user_name":this.user_name,
                   "user_prenom":this.user_prenom,
                   "user_adresse":this.user_adresse,
                   "user_cp":this.user_cp,
@@ -66,7 +66,7 @@ export class FormulaireComponent implements OnInit {
                   "user_login":this.user_login,
                   "user_pays":this.user_pays,
                   "user_pwd":this.user_pwd         
-                });
+                }));
   }
 
 }

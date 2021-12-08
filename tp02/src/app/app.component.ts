@@ -8,9 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'tp02';
 
-  resultFormulaire :any;
+  resultFormulaire :string = "";
 
-  transite(arg:any):void{
+  transite(arg:string):void{
+    console.log(arg);
     this.resultFormulaire = arg;
   }
 }

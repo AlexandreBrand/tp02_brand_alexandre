@@ -7,8 +7,12 @@ import { Component, OnInit ,Input} from '@angular/core';
 })
 export class RecapitulatifComponent implements OnInit {
 
-  @Input() dataUtilisateur = {};
-
+  
+  @Input() dataUtilisateur = "{}";
+  
+  
+  data  = JSON.parse(this.dataUtilisateur)
+  
   constructor() { }
 
   ngOnInit(): void {
